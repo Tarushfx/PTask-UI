@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "#start": "UI server, HMR is enabled in dev mode",
-    "start": "nodemon -w uiserver.js -w .env uiserver.js",
+    "start": "node uiserver.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "#compile": "Compiles the code for production",
-    "compile": "webpack --mode production",
+    "build": "webpack --mode production",
     "#watch": "Compiles the code and watchs for changes",
     "watch": "webpack --watch",
     "#lint": "running ESLint on the files",

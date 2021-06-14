@@ -10,7 +10,7 @@ import { WebSocketLink } from "@apollo/client/link/ws";
 import MessageArea from "./messageArea.jsx";
 
 const link = new WebSocketLink({
-  uri: `ws://localhost:4000/graphql`,
+  uri: `wss://ptask-api.herokuapp.com/graphql`,
   options: {
     reconnect: true,
   },
@@ -18,7 +18,7 @@ const link = new WebSocketLink({
 
 const client = new ApolloClient({
   link,
-  uri: "http://localhost:4000/",
+  uri: "https://ptask-api.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 

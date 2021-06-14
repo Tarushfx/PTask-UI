@@ -104,6 +104,7 @@ class ProfileBar extends React.Component {
   }
 
   handleMessageClick() {
+    if(process.browser) {
     $(".calendar-container").hasClass("calendar-show")
       ? $(".inbox-calendar-checkbox").click()
       : null;
@@ -116,7 +117,8 @@ class ProfileBar extends React.Component {
       $("#quote-inbox-content").removeClass("hide");
       $(".message-area").addClass("hide");
     }
-  }
+      
+  }}
 
   async showNotif() {
     await this.props.loadData();

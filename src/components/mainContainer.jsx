@@ -28,7 +28,7 @@ const MainContainer = (props) => {
   let onMessageSelect = ({ currentTarget: input }) => {
     console.log(input.id.split("-")[1]);
     if (!taskViewState) taskViewState = true;
-    if (taskViewState) {
+    if (taskViewState && process.browser) {
       const taskTarget = { ...filterArray[input.id.split("-")[1]] };
       setTaskState(taskTarget);
       $(".mail-contents").removeClass("hide");
